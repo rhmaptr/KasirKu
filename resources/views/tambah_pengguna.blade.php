@@ -13,7 +13,6 @@
             <h1 class="text-2xl font-bold text-green-400">Tambah Pengguna</h1>
             <form action="" method="POST" enctype="multipart/form-data" class="mt-4 bg-white p-6 rounded-lg shadow-md">
                 @csrf
-                
                 <label class="block font-medium">Foto</label>
                 <input type="file" name="foto" class="w-full border-2 p-2 rounded-md mb-4 focus:border-green-400 outline-none" accept="image/*" required>
 
@@ -24,7 +23,7 @@
                 </select>
                 
                 <label class="block font-medium">Nama</label>
-                <input type="text" name="nama" class="w-full border-2 p-2 rounded-md mb-4 focus:border-green-400 outline-none" required>
+                <input type="text" name="name" class="w-full border-2 p-2 rounded-md mb-4 focus:border-green-400 outline-none" required>
                 
                 <label class="block font-medium">No HP</label>
                 <input type="tel" name="no_hp" class="w-full border-2 p-2 rounded-md mb-4 focus:border-green-400 outline-none" required>

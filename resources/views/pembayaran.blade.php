@@ -23,32 +23,33 @@
                 <Image />
             </div>
         </div>
-        <div class="bg-black w-[1220px] h-[1px] mt-12 ml-[-1220px]"></div>
-        <div class="bg-slate-50 w-[635px] h-[557px] mt-[50px] ml-[-1220px]">
-            <div class="bg-slate-50 w-[625px] h-[50px] flex ml-[10px]">
+        <div class="bg-white w-[580px] h-[570px] mt-[50px] ml-[-1220px] shadow-lg rounded-[15px]">
+            <div class="bg-transparent w-[625px] h-[50px] flex ml-[15px]">
                 <p class="text-green-400 text-[35px] font-semibold">Pesanan</p>
             </div>
-            <div class="bg-black w-[570px] h-[1px]"></div>
-            <div class="bg-slate-500 w-[570px] h-[410px] flex-col overflow-y-auto no-scrollbar">
-                <div class="bg-slate-200 w-[570px] h-[40px] flex">
-                    <div class="bg-amber-400 w-[160px] h-[40px] text-black text-[20px] font-medium pt-[5px]">Kode
+            <div class="bg-transparent w-[570px] h-[410px] flex-col overflow-y-auto no-scrollbar">
+                <div class="bg-transparent w-[570px] h-[40px] flex">
+                    <div
+                        class="bg-transparent w-[160px] ml-[20px] h-[40px] text-black text-[20px] font-medium pt-[5px]">
+                        Kode
                         Transaksi</div>
-                    <div class="bg-red-400 w-[15px] h-[40px] text-black text-[25px] font-medium">:</div>
-                    <div class="bg-sky-400 w-[395px] h-[40px] text-black text-[20px] font-medium pt-[5px] line-clamp-1">
+                    <div class="bg-transparent w-[15px] h-[40px] text-black text-[25px] font-medium">:</div>
+                    <div
+                        class="bg-transparent w-[395px] h-[40px] text-black text-[20px] font-medium pt-[5px] line-clamp-1">
                         123445</div>
                 </div>
-                <div class="bg-white w-[550px] h-[70px] mt-4 ml-[10px] rounded-[15px] pt-[10px] flex shadow-lg">
+                <div class="bg-white w-[550px] h-[70px] mt-1 ml-[10px] rounded-[15px] pt-[10px] flex shadow-lg">
                     <div class="bg-slate-200 w-[80px] h-[50px] ml-4 rounded-[10px]">
                         <Image />
                     </div>
-                    <div class="bg-yellow-300 w-[150px] h-[25px] ml-4 text-black font-semibold pt-1 line-clamp-1">Nama
+                    <div class="bg-transparent w-[150px] h-[25px] ml-4 text-black font-semibold pt-1 line-clamp-1">Nama
                         Barang apa aja boleh terserah kamu</div>
-                    <div class="bg-teal-600 w-[150px] h-[25px] mt-[25px] ml-[-150px] flex">
-                        <div class="bg-red-400 w-[30px] h-[25px] pt-[1px] text-black font-medium">Rp.</div>
-                        <div class="bg-indigo-500 w-[113px] h-[25px] pt-[2px] text-black font-medium line-clamp-1">
+                    <div class="bg-transparent w-[150px] h-[25px] mt-[25px] ml-[-150px] flex">
+                        <div class="bg-transparent w-[30px] h-[25px] pt-[1px] text-black font-medium">Rp.</div>
+                        <div class="bg-transparent w-[113px] h-[25px] pt-[2px] text-black font-medium line-clamp-1">
                             300.000.000.000</div>
                     </div>
-                    <div class="bg-sky-300 w-[30px] h-[28px] mt-[25px] ml-2">
+                    <div class="bg-transparent w-[30px] h-[28px] mt-[25px] ml-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#dc2626"
                             viewBox="0 0 256 256">
                             <path
@@ -57,8 +58,8 @@
                         </svg>
                     </div>
                     <input
-                        class="bg-slate-200 w-[30px] h-[28px] mt-[25px] ml-2 text-center text-black font-medium pt-1 rounded-[7px]"></input>
-                    <div class="bg-rose-400 w-[30px] h-[28px] mt-[25px] ml-2">
+                        class="bg-transparent w-[30px] h-[28px] mt-[25px] ml-2 text-center text-black font-medium pt-1 rounded-[7px]"></input>
+                    <div class="bg-transparent w-[30px] h-[28px] mt-[25px] ml-2">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#4ade80"
                             viewBox="0 0 256 256">
                             <path
@@ -66,37 +67,36 @@
                             </path>
                         </svg>
                     </div>
-                    <div class="bg-yellow-200 w-[140px] h-[25px] mt-[25px] ml-[20px] flex">
-                        <div class="bg-blue-400 w-[30px] h-[25px] text-black font-medium">Rp.</div>
-                        <div class="bg-red-500 w-[110px] h-[25px] text-black font-medium line-clamp-1">300.000.000.000
+                    <div class="bg-transparent w-[140px] h-[25px] mt-[25px] ml-[20px] flex">
+                        <div class="bg-transparent w-[30px] h-[25px] text-black font-medium">Rp.</div>
+                        <div class="bg-transparent w-[110px] h-[25px] text-black font-medium line-clamp-1">
+                            300.000.000.000
                         </div>
                     </div>
                 </div>
             </div>
             <div class="bg-black w-[570px] h-[1px]"></div>
-            <div class="bg-yellow-300 w-[570px] h-[110px]">
-                <div class="bg-pink-300 w-[570px] h-[50px] flex">
-                    <div class="bg-red-300 w-[100px] h-[50px] text-black text-[30px] font-semibold">Total :</div>
-                    <div class="bg-orange-400 w-[470px] h-[50px] flex justify-end">
-                        <div class="bg-slate-50 h-[50px] flex line-clamp-1">
-                            <div class="bg-blue-400 w-[50px] h-[50px] text-[30px] text-black font-semibold">Rp.</div>
-                            <div class="bg-red-500 h-[50px] text-black text-[30px] font-semibold">3000.000.000.000</div>
+            <div class="bg-transparent w-[570px] h-[110px]">
+                <div class="bg-transparent w-[570px] h-[50px] flex">
+                    <div class="bg-transparent w-[100px] h-[50px] text-black text-[30px] font-semibold ml-[10px]">Total :</div>
+                    <div class="bg-transparent w-[470px] h-[50px] flex justify-end">
+                        <div class="bg-transparent h-[50px] flex line-clamp-1">
+                            <div class="bg-transparent w-[50px] h-[50px] text-[30px] text-black font-semibold">Rp.</div>
+                            <div class="bg-transparent h-[50px] text-black text-[30px] font-semibold">3000.000.000.000</div>
                         </div>
                     </div>
                 </div>
-                <div class="bg-blue-300 w-[570px] h-[50px] mt-[10px]">
+                <div class="bg-transparent w-[570px] h-[50px] mt-[10px]">
                     <div
-                        class="bg-white border-2 border-red-600 w-[550px] h-[50px] ml-[10px] rounded-[20px] text-center pt-[10px] font-semibold text-[20px] cursor-pointer text-red-600">
-                        Kembali</div>
+                        class="bg-green-400 hover:bg-[#50C878] w-[560px] h-[40px] ml-[10px] rounded-[10px] text-center font-semibold text-[17px] cursor-pointer flex items-center justify-center">
+                        Pesan</div>
                 </div>
             </div>
         </div>
-        <div class="bg-black w-[1px] h-[570px] ml-[-63px] mt-[53px]"></div>
         <div class="bg-white w-[640px] h-[300px] ml-[3px] mt-[53px] rounded-[15px] shadow-lg">
             <div
                 class="bg-transparent w-[620px] h-[50px] ml-[10px] mt-[4px] flex text-[30px] font-semibold text-green-400">
                 Pelanggan</div>
-            <div class="bg-black w-[630px] h-[1px] mt-[-5px] ml-[5px]"></div>
             <div id="tambah_pelanggan"
                 class="bg-green-400 w-[170px] h-[35px] cursor-pointer shadow-md rounded-[10px] ml-[10px] mt-[5px] text-white font-semibold flex items-center justify-center text-[16px]">
                 Tambah Pelanggan</div>
@@ -128,7 +128,6 @@
             <div
                 class="bg-transparent w-[620px] h-[50px] ml-[10px] mt-[4px] flex text-[30px] font-semibold text-green-400">
                 Pembayaran</div>
-            <div class="bg-black w-[630px] h-[1px] mt-[-5px] ml-[5px]"></div>
             <div class="bg-transparent w-[615px] ml-[10px] flex-col mt-[5px]">
                 <div class="bg-transparent w-[170px] h-[30px] text-semibold">Nominal uang :</div>
                 <input type="text"

@@ -12,13 +12,12 @@
         <h2 class="text-3xl font-bold text-gray-700">Selamat Datang</h2>
         <p class="text-gray-500 text-sm mt-2">Silakan masuk untuk melanjutkan</p>
 
-        <form action="/login" method="POST" class="mt-6 text-left">
+        <form action="{{ route('login') }}" method="POST" class="mt-6 text-left">
             @csrf
             <label class="block font-medium text-gray-700">Nama</label>
-            <input type="text" name="nama" 
+            <input type="text" name="name" 
                 class="w-full border-2 p-3 rounded-lg mb-4 focus:border-green-500 outline-none transition" 
                 placeholder="Masukkan nama Anda" required>
-
             <label class="block font-medium text-gray-700">Kata Sandi</label>
             <div class="relative">
                 <input type="password" id="password" name="password" 

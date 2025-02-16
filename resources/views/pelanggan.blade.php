@@ -11,11 +11,13 @@
 <body>
     <div class="bg-slate-50 w-screen h-screen flex">
         <x-sidebar></x-sidebar>
-        <div class="bg-slate-50 w-[250px] h-10 ml-4 mt-2 flex gap-2">
-            <div class="bg-slate-50 w-[30px] h-[30px] mt-1">
-                <Image />
+        <div class="bg-slate-50 w-[250px] h-10 ml-4 mt-2 flex items-center gap-2">
+            <div class="w-[30px] h-[30px] flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" viewBox="0 0 24 24">
+                    <path d="M19 3h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM5 20V9h14v11H5Z" />
+                </svg>
             </div>
-            <p class="text-center text-green-400 font-bold pt-2">ini adalah tanggal</p>
+            <p id="currentDate" class="text-green-400 font-bold"></p>
         </div>
         <div class="bg-slate-50 w-[240px] h-10 mt-2 ml-[720px] flex gap-1">
             <p class="text-center text-green-400 font-semibold pt-2 ml-[75px]">Nama Pengguna</p>
@@ -23,6 +25,11 @@
                 <Image />
             </div>
         </div>
+        <script>
+            document.getElementById("currentDate").textContent = new Date().toLocaleDateString("id-ID", {
+                weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+            });
+        </script>
         <div class="bg-green-100 w-[1217px] h-[150px] mt-[65px] ml-[-1217px] rounded-[15px] shadow-lg">
             <p class="text-green-400 text-[23px] font-medium mt-2 ml-4">Bekerjalah Dengan Teliti!</p>
             <p class="text-slate-400 text-[13px] font-medium ml-4">Ayo bekerja dengan teliti lakukan apa yang harus
