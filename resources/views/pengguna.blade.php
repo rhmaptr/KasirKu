@@ -6,17 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>KasirKu</title>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <div class="bg-slate-50 w-screen h-screen flex">
         <x-sidebar></x-sidebar>
         <div class="bg-slate-50 w-[250px] h-10 ml-4 mt-2 flex items-center gap-2">
-            <div class="w-[30px] h-[30px] flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="green" viewBox="0 0 24 24">
-                    <path d="M19 3h-1V2a1 1 0 0 0-2 0v1H8V2a1 1 0 0 0-2 0v1H5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2ZM5 20V9h14v11H5Z" />
-                </svg>
-            </div>
             <p id="currentDate" class="text-green-400 font-bold"></p>
         </div>
         <div class="bg-slate-50 w-[240px] h-10 mt-2 ml-[720px] flex gap-1">
@@ -32,8 +32,8 @@
         </script>
         <div class="bg-green-100 w-[1217px] h-[150px] mt-[65px] ml-[-1217px] rounded-[15px] shadow-lg">
             <p class="text-green-400 text-[23px] font-medium mt-2 ml-4">Bekerjalah Dengan Teliti!</p>
-            <p class="text-slate-400 text-[13px] font-medium ml-4">Klik 'tambah pengguna' jika anda ingin menambahkan
-                data produk</p>
+            <p class="text-slate-400 text-[13px] font-medium ml-4">Ayo bekerja dengan teliti lakukan apa yang harus
+                kerjakan</p>
             <img src="laptop.png" alt="" class="ml-[900px] mt-[-62px] w-[223px] h-[153px]" />
         </div>
         <div class="bg-white w-[1217px] h-[390px] flex-col mt-[230px] ml-[-1217px] rounded-[15px] shadow-lg flex">
@@ -50,77 +50,82 @@
                     </svg>
                 </div>
             </div>
-            <div id="tambah_pengguna"
-                class="bg-[#50C878] hover:bg-green-400 w-[200px] h-[40px] ml-4 mt-2 rounded-[10px] flex shadow-lg cursor-pointer">
-                <div class="bg-transparent w-[30px] h-[30px] ml-2 mt-[5px] flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000" viewBox="0 0 256 256">
-                        <path
-                            d="M228,128a12,12,0,0,1-12,12H140v76a12,12,0,0,1-24,0V140H40a12,12,0,0,1,0-24h76V40a12,12,0,0,1,24,0v76h76A12,12,0,0,1,228,128Z">
-                        </path>
-                    </svg>
-                </div>
-                <div class="bg-transparent w-[150px] h-[30px] mt-[5px] pt-1 pl-1 font-medium">Tambah Pengguna</div>
-            </div>
 
-            <script>
-            document.getElementById("tambah_pengguna").addEventListener("click", function() {
-                window.location.href = "/tambah_pengguna";
-            });
-            </script>
+            <table class="w-full border-collapse border border-gray-300">
+                <thead>
+                    <tr class="bg-green-400">
+                        <th class="p-2 border text-white">No</th>
+                        <th class="p-2 border text-white">Nama Lengkap</th>
+                        <th class="p-2 border text-white">Username</th>
+                        <th class="p-2 border text-white">Kata Sandi</th>
+                        <th class="p-2 border text-white">Hak Akses</th>
+                        <th class="p-2 border text-white">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (isset($pengguna) && count($pengguna) > 0)
+                    @foreach ($pengguna as $item)
+                    <tr class="border-b">
+                        <td class="p-2 text-center">{{ $item->id }}</td>
+                        <td class="p-2 text-center">{{ $item->akses }}</td>
+                        <td class="p-2 text-center">{{ $item->nama }}</td>
+                        <td class="p-2 text-center">{{ $item->username }}</td>
+                        <td class="p-2 text-center">{{ $item->password }}</td>
+                        <td class="p-2 text-center flex justify-center gap-2">
+                            <!-- Tombol Edit -->
+                            <a href="{{ route('pelanggan.edit', $item->id) }}"
+                                class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">
+                                Edit
+                            </a>
 
-            <div class="bg-green-400 w-[1179px] h-[45px] mt-2 ml-4 rounded-[5px] shadow-lg flex">
-                <p class="ml-[100px] mt-[10px] font-medium">Kode pengguna</p>
-                <p class="ml-[100px] mt-[10px] font-medium">Nama Lengkap</p>
-                <p class="ml-[100px] mt-[10px] font-medium">Username</p>
-                <p class="ml-[100px] mt-[10px] font-medium">Kata Sandi</p>
-                <p class="ml-[100px] mt-[10px] font-medium">Hak akses</p>
-                <p class="ml-[100px] mt-[10px] font-medium">Aksi</p>
-            </div>
-            <div class="bg-purple-400 w-[1179px] h-[222px] ml-4 mt-2 flex-col overflow-y-auto no-scrollbar">
-                <div class="bg-orange-400 w-[1179px] h-[45px] rounded-[5px] pt-[5px] mt-2 flex shadow-md">
-                    <div class="bg-yellow-300 w-[200px] h-[35px] ml-[20px]">
-                        <div
-                            class="bg-rose-400 w-[200px] h-[23px] text-center mt-[6px] line-clamp-1 text-black font-medium">
-                            07342625</div>
-                    </div>
-                    <div class=" bg-yellow-300 w-[200px] h-[35px] ml-[20px]">
-                        <div
-                            class="bg-rose-400 w-[200px] h-[23px] text-center mt-[6px] line-clamp-1 text-black font-medium">
-                            uncle muthu</div>
-                    </div>
-                    <div class="bg-yellow-300 w-[200px] h-[35px] ml-[20px] flex justify-center items-center">
-                        <div class="bg-orange-400 w-[25px] h-[23px] text-black font-medium">Rp.</div>
-                        <div class="bg-rose-400 h-[23px] line-clamp-1 text-black font-medium">300.000</div>
-                    </div>
-                    <div class="bg-yellow-300 w-[200px] h-[35px] ml-[20px]">
-                        <div
-                            class="bg-rose-400 w-[200px] h-[23px] text-center mt-[6px] line-clamp-1 text-black font-medium">
-                            50</div>
-                    </div>
-                    <div class="bg-yellow-300 w-[200px] h-[35px] ml-[20px] flex justify-center items-center">
-                        <div class="bg-blue-400 w-[80px] h-[30px] flex">
-                            <div class="bg-rose-400 w-[40px] h-[30px] flex justify-center items-center">
-                                <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                    fill="#377bc3" viewBox="0 0 256 256">
-                                    <path
-                                        d="M227.31,73.37,182.63,28.68a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H92.69A15.86,15.86,0,0,0,104,219.31L227.31,96a16,16,0,0,0,0-22.63ZM192,108.68,147.31,64l24-24L216,84.68Z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="bg-green-400 w-[40px] h-[30px] flex justify-center items-center">
-                                <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="28" height="28"
-                                    fill="#db3333" viewBox="0 0 256 256">
-                                    <path
-                                        d="M224,56a8,8,0,0,1-8,8h-8V208a16,16,0,0,1-16,16H64a16,16,0,0,1-16-16V64H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,56ZM88,32h80a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16Z">
-                                    </path>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                            <!-- Tombol Hapus -->
+                            <form action="{{ route('pelanggan.destroy', $item->id) }}" method="POST"
+                                onsubmit="return confirm('Yakin ingin menghapus?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">
+                                    Hapus
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                    @else
+                    <tr>
+                        <td colspan="6" class="text-center p-4 text-green-500 text-lg font-semibold">
+                            Tidak ada data Pengguna.
+                        </td>
+                    </tr>
+                    @endif
+                </tbody>
+            </table>
         </div>
     </div>
+    <script>
+        // Menangani pencarian
+        document.querySelector('input[placeholder="Telusuri..."]').addEventListener('input', function() {
+            const query = this.value.toLowerCase(); // Mengambil input pencarian
+            const rows = document.querySelectorAll('tbody tr'); // Menangkap semua baris tabel
+
+            rows.forEach(row => {
+                const columns = row.querySelectorAll('td'); // Mengambil setiap kolom dalam baris
+                let matched = false;
+
+                columns.forEach(col => {
+                    if (col.textContent.toLowerCase().includes(query)) {
+                        matched = true; // Jika ada teks yang cocok dengan query
+                    }
+                });
+
+                // Menampilkan atau menyembunyikan baris berdasarkan hasil pencarian
+                if (matched) {
+                    row.style.display = ''; // Menampilkan baris
+                } else {
+                    row.style.display = 'none'; // Menyembunyikan baris
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

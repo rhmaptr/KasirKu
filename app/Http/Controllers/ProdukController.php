@@ -11,11 +11,10 @@ class ProdukController extends Controller
 {
         public function index() {
             $produk = Produk::all();
-            dd($produk);
+            Log::info($produk);
             return view('produk', compact('produk'));
         }
         
-
     public function create()
     {
         return view('tambah_produk');
@@ -44,7 +43,7 @@ class ProdukController extends Controller
             'foto' => $fotoPath
         ]);
 
-        return redirect()->back()->with('success', 'Produk berhasil ditambahkan!');
+        return redirect()->route('produk.index')->with('success', 'Produk berhasil ditambahkan!');
     }
 
         public function edit($id)
@@ -64,7 +63,7 @@ class ProdukController extends Controller
 
         $produk->delete();
 
-        return redirect()->route('produk')->with('success', 'Produk berhasil dihapus!');
+        return redirect()->route('produk.index')->with('success', 'Produk berhasil dihapus!');
     }
 
         public function update(Request $request, $id)
@@ -93,7 +92,7 @@ class ProdukController extends Controller
 
         $produk->save();
 
-        return redirect()->route('produk')->with('success', 'Produk berhasil diperbarui!');
+        return redirect()->route('produk.index')->with('success', 'Produk berhasil diperbarui!');
     }
 
 }

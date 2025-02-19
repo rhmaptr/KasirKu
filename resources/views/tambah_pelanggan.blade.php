@@ -11,7 +11,7 @@
         <x-sidebar></x-sidebar>
         <div class="w-full p-6">
             <h1 class="text-2xl font-bold text-green-500">Tambah Pelanggan</h1>
-            <form action="/pelanggan" method="POST" class="mt-4 bg-white p-6 rounded-lg shadow-md">
+            <form action="{{ route('pelanggan.store') }}" method="POST" class="mt-4 bg-white p-6 rounded-lg shadow-md">
                 @csrf
                 
                 <label class="block font-medium">Nama</label>

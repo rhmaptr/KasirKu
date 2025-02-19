@@ -36,8 +36,18 @@ public function login(Request $request)
         }
     }
 
-    return back()->withErrors(['name' => 'Nama atau password salah.']);
+    return back()->withErrors(['password' => 'Nama atau password salah.']);
 }
+
+public function logout(Request $request)
+{
+    Auth::logout();
+    $request->session()->invalidate();
+    $request->session()->regenerateToken();
+
+    return redirect('/login');
+}
+
 
 }
 
